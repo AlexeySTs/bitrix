@@ -1,4 +1,5 @@
 <?
+$PERM["ads"]["8"]="X";
 $PERM["profile-buyer"]["*"]="D";
 $PERM["profile-buyer"]["7"]="X";
 $PERM["profile_seller"]["*"]="D";
