@@ -29,21 +29,21 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Личный кабинет продавца", 
+		"Продавец", 
 		"/profile_seller/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Личный кабинет покупателя", 
+		"Покуп", 
 		"/profile-buyer/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"test", 
+		"t", 
 		"/test.php", 
 		Array(), 
 		Array(), 
