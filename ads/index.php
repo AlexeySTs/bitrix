@@ -6,7 +6,7 @@ $APPLICATION->SetTitle("Title");
 	"",
 	Array(
 		"ADD_ELEMENT_CHAIN" => "N",
-		"ADD_SECTIONS_CHAIN" => "Y",
+		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
 		"AJAX_OPTION_HISTORY" => "N",
@@ -36,7 +36,7 @@ $APPLICATION->SetTitle("Title");
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "5",
 		"IBLOCK_TYPE" => "ads",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"LIST_FIELD_CODE" => array("",""),
 		"LIST_PROPERTY_CODE" => array("",""),
@@ -74,23 +74,4 @@ $APPLICATION->SetTitle("Title");
 		"USE_SHARE" => "N"
 	)
 );?> <br>
- <br>
- <?$APPLICATION->IncludeComponent(
-	"bitrix:news.line",
-	"",
-	Array(
-		"ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "300",
-		"CACHE_TYPE" => "A",
-		"DETAIL_URL" => "",
-		"FIELD_CODE" => array("",""),
-		"IBLOCKS" => array("5"),
-		"IBLOCK_TYPE" => "ads",
-		"NEWS_COUNT" => "9",
-		"SORT_BY1" => "TIMESTAMP_X",
-		"SORT_BY2" => "SORT",
-		"SORT_ORDER1" => "DESC",
-		"SORT_ORDER2" => "ASC"
-	)
-);?><br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+ <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

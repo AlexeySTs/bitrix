@@ -1,22 +1,13 @@
 <?
-use Bitrix\Main\Loader,
-Bitrix\Main,
-Bitrix\Iblock;
-
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-
 $APPLICATION->SetTitle("test");
-
-Loader::includeModule("iblock");
-$arSelect = Array("ID", "NAME", "DATE_ACTIVE_FROM","IBLOCK_ID", "PROPERTY_PRICE", "PROPERTY_GARAGES_VALUE", "PROPERTY_PREFERRED_DEAL_VALUE");
-$arFilter = Array("IBLOCK_ID" => "5", "PROPERTY_GARAGES_VALUE"=>'YES', "ACTIVE_DATE"=>"Y", "ACTIVE"=>"Y");
-$res = CIBlockElement::GetList(Array(), $arFilter, false, false, $arSelect);
-$arRes = [];
-while($ob = $res->GetNextElement())
-{
- $arRes[] = $ob->GetFields();
- 
-}
-var_dump($arRes);
-
-?> <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+?>
+	<?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "breadcrumb", Array(
+	  "PATH" => "",	// Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
+		  "SITE_ID" => "s1",	// Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
+		  "START_FROM" => "0",	// Номер пункта, начиная с которого будет построена навигационная цепочка
+	  ),
+	  false
+  );
+	
+?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
