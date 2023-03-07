@@ -33,6 +33,7 @@ $this->setFrameMode(true);
 		$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
 		?>
 		<div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
+			<div id="<?=$this->GetEditAreaId($arItem['ID']);?>">
 			<a href="#">
 				<img alt="<?= $arItem['PREVIEW_PICTURE']['ALT'] ?>" src="<?= $arItem['PREVIEW_PICTURE']['SRC'] ?>" class="img-fluid">
 			</a>
@@ -44,7 +45,7 @@ $this->setFrameMode(true);
 					</p>
 				</div>
 
-			<div id="<?=$this->GetEditAreaId($arItem['ID']);?>"></div>
+			</div>
 		</div>
 	<?endforeach;?>
 		</div>

@@ -30,7 +30,7 @@ $this->setFrameMode(true);
 		?>
 		
 			<div class="col-md-6 col-lg-4 mb-4">
-			<div id = <?= $this->GetEditAreaId($arItem['ID']); ?> ></div>
+			<div id = <?= $this->GetEditAreaId($arItem['ID']); ?> >
 				<a href="<?= $arItem['DETAIL_PAGE_URL'] ?>" class="prop-entry d-block"> 
 					<figure> 
 						<img alt="<?= $arItem['PREVIEW_PICTURE']['ALT'] ?>" 
@@ -64,6 +64,7 @@ $this->setFrameMode(true);
 						</div>
 					</div>
 				</a>
+				</div>
 			</div>
 		
 		

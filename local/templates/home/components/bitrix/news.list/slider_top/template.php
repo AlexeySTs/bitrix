@@ -13,6 +13,9 @@
 $this->setFrameMode(true);
 ?>
 
+
+
+
 <div class="slide-one-item home-slider owl-carousel">
 <?if($arParams["DISPLAY_TOP_PAGER"]):?>
 	<?=$arResult["NAV_STRING"]?><br />
@@ -22,26 +25,27 @@ $this->setFrameMode(true);
 	$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
 	$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
 	?>
-	
+	<div  id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
 		<div class="site-blocks-cover" 
 			<?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arItem["PREVIEW_PICTURE"])):?>
 				style="background-image: url(<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>);" 
 			<?endif;?>
 			data-aos="fade" data-stellar-background-ratio="0.5">
-			<div id = <?= $this->GetEditAreaId($arItem['ID']); ?> ></div>
-			<div class="text">
-				<h2><?=$arItem["NAME"]?></h2>
-				<p class="location">
-					<span class="property-icon icon-room"></span> <?=$arItem["DISPLAY_PROPERTIES"]["ADDRESS"]["VALUE"]?>
-				</p>
-				<p class="mb-2">
-					<strong>$<?=$arItem["DISPLAY_PROPERTIES"]["PRICE"]["VALUE"]?></strong>
-				</p>
-				<p class="mb-0">
-					<a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="text-uppercase small letter-spacing-1 font-weight-bold"><?=GetMessage('MORE')?></a>
-				</p>
-			</div>
-		</div>
+			
+				<div class="text">
+					<h2><?=$arItem["NAME"]?></h2>
+					<p class="location">
+						<span class="property-icon icon-room"></span> <?=$arItem["DISPLAY_PROPERTIES"]["ADDRESS"]["VALUE"]?>
+					</p>
+					<p class="mb-2">
+						<strong>$<?=$arItem["DISPLAY_PROPERTIES"]["PRICE"]["VALUE"]?></strong>
+					</p>
+					<p class="mb-0">
+						<a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="text-uppercase small letter-spacing-1 font-weight-bold"><?=GetMessage('MORE')?></a>
+					</p>
+				</div>
+		</div> 
+	</div>
 	
 <?endforeach;?>
 <?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
