@@ -119,7 +119,12 @@ IncludeTemplateLangFile(__FILE__);
               );?>
             </h1>
           </div>
-          
+              <div class="col-4 col-md-4 col-lg-8">
+        		<nav class="site-navigation text-right text-md-right" role="navigation">
+
+            <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3">
+                <a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a>
+            </div>
           <?$APPLICATION->IncludeComponent(
 	"bitrix:menu",
 	"top_multi_menu",
@@ -137,8 +142,8 @@ IncludeTemplateLangFile(__FILE__);
 		"USE_EXT" => "N"
 	)
 );?>
-
-
+		  </nav>
+		</div>
 
         </div>
       </div>

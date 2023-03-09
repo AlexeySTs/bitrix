@@ -34,7 +34,7 @@ $this->setFrameMode(true);
 		?>
 		<div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="100">
 			<div id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-			<a href="#">
+			<a href="<?= $arItem['DETAIL_PAGE_URL'] ?>">
 				<img alt="<?= $arItem['PREVIEW_PICTURE']['ALT'] ?>" src="<?= $arItem['PREVIEW_PICTURE']['SRC'] ?>" class="img-fluid">
 			</a>
 			<div class="p-4 bg-white">

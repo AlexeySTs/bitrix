@@ -1,7 +1,8 @@
 <?
-$PERM["ads"]["8"]="X";
+$PERM["profile-buyer"]["6"]="X";
+$PERM["profile-buyer"]["7"]="D";
 $PERM["profile-buyer"]["*"]="D";
-$PERM["profile-buyer"]["7"]="X";
+$PERM["ads"]["8"]="X";
 $PERM["profile_seller"]["*"]="D";
 $PERM["profile_seller"]["7"]="X";
 $PERM["search"]["5"]="W";
