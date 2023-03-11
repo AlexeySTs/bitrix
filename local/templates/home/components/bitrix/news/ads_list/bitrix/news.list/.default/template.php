@@ -12,17 +12,38 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
+<?
+$userId = $GLOBALS['USER']->GetID();
+$checkUrl = $APPLICATION->GetCurPage(false) == '/profile_seller/my-ads/';
+
+if($APPLICATION->GetCurPage(false) == '/profile_seller/my-ads/') {
+  
+  foreach($arResult["ITEMS"] as $key=>$arItem) {
+    if($GLOBALS['USER']->GetID() != $arItem['CREATED_BY']) {
+      unset($arResult["ITEMS"][$key]);
+    }         
+  }  
+
+}
+?>
 <div class="site-section site-section-sm bg-light">
       <div class="container">
         <div class="row mb-5">
           <div class="col-12">
             <div class="site-section-title">
-              <h2><?= GetMessage('NEW_ADS')?></h2>
+              <?if($checkUrl):?>
+                <h2><?= GetMessage('YOUR_ADS')?></h2>
+              <?else:?>
+                <h2><?= GetMessage('NEW_ADS')?></h2>
+              <?endif?>
             </div>
           </div>
         </div>
         <div class="row mb-5">
-<?//var_dump($arResult["ITEMS"][0]);?>
+
+<?if(count($arResult["ITEMS"]) == 0): ?>
+  <p><?=GetMessage('NO_ADS')?></p>
+<?endif?>
 <?if($arParams["DISPLAY_TOP_PAGER"]):?>
 	<?=$arResult["NAV_STRING"]?><br />
 <?endif;?>

@@ -5,5 +5,7 @@ $MESS['AREA'] = "AREA";
 $MESS['BEDS'] = "BEDS";
 $MESS['BATHS'] = "BATHS";
 $MESS['GARAGES'] = "GARAGES";
+$MESS['YOUR_ADS'] = "Your ads";
+$MESS['NO_ADS'] = "You have no ads";
 
 ?>

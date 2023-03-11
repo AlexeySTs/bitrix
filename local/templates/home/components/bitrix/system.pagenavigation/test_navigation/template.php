@@ -42,7 +42,7 @@ $strNavQueryStringFull = ($arResult["NavQueryString"] != "" ? "?".$arResult["Nav
 <?
 
 $navSelect = $arResult['NavPageNomer'];
-$navCount = $arResult['NavPageCount'];;
+$navCount = $arResult['NavPageCount'];
 
 // Формирование ссылки 
 $pageUrl = $arResult['sUrlPath'];

@@ -12,6 +12,8 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
+
+
 <!--
 	 <div class="site-section site-section-sm bg-light">
       <div class="container">
@@ -57,4 +59,4 @@ $this->setFrameMode(true);
 	<?=$arResult["NAV_STRING"]?>
 <?endif;?>
 	</div>
-</div>
+</div><br>

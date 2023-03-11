@@ -5,4 +5,6 @@ $MESS['AREA'] = "S";
 $MESS['BEDS'] = "Кроватей";
 $MESS['BATHS'] = "Ванн";
 $MESS['GARAGES'] = "Гаражей";
+$MESS['YOUR_ADS'] = "Ваши объявления";
+$MESS['NO_ADS'] = "У вас нет объявлений";
 ?>
